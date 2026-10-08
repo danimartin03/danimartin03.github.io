@@ -1,0 +1,136 @@
+/* ==========================================================
+   base.css — variables de diseño, reset y tipografía
+   ========================================================== */
+
+/* ---------- Tema oscuro (por defecto) ---------- */
+:root {
+  --bg: #072B43;
+  --bg-alt: #06243A;
+  --surface: #0B3C5D;
+  --surface-2: #10496F;
+  --line: rgba(157, 183, 200, .2);
+  --text: #EAF2F7;
+  --muted: #9DB7C8;
+  --accent: #FFC72C;        /* amarillo tarjeta */
+  --accent-ink: #072B43;    /* texto sobre amarillo */
+  --link: #FFC72C;
+  --red: #D8382F;           /* rojo tarjeta: solo como relleno */
+  --green: #3DD68C;
+  --shadow: 0 18px 40px -18px rgba(0, 0, 0, .55);
+  --header-bg: rgba(7, 43, 67, .82);
+
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+
+  /* Escala tipográfica fluida: crece con el ancho de pantalla */
+  --fs-sm: .875rem;
+  --fs-base: clamp(1rem, .96rem + .2vw, 1.0625rem);
+  --fs-lg: clamp(1.125rem, 1.05rem + .4vw, 1.3125rem);
+  --fs-h3: clamp(1.25rem, 1.15rem + .5vw, 1.5rem);
+  --fs-h2: clamp(2rem, 1.5rem + 2.4vw, 3.25rem);
+  --fs-h1: clamp(2.5rem, 1.6rem + 4.6vw, 4.75rem);
+
+  --radius: 18px;
+  --radius-sm: 10px;
+  --container: 1160px;
+  --header-h: 68px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  color-scheme: dark;
+}
+
+/* ---------- Tema claro ---------- */
+:root[data-theme="light"] {
+  --bg: #EAF2F7;
+  --bg-alt: #DDE9F1;
+  --surface: #FFFFFF;
+  --surface-2: #F4F8FB;
+  --line: rgba(11, 60, 93, .16);
+  --text: #072B43;
+  --muted: #3D6079;
+  --link: #0B3C5D;
+  --green: #0E7C4A;
+  --shadow: 0 18px 40px -22px rgba(7, 43, 67, .35);
+  --header-bg: rgba(234, 242, 247, .85);
+  color-scheme: light;
+}
+
+/* ---------- Reset mínimo ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+p, h1, h2, h3, dl, dd, figure { margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+a { color: inherit; }
+
+/* ---------- Tipografía ---------- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+h1 { font-size: var(--fs-h1); font-weight: 750; }
+h2 { font-size: var(--fs-h2); font-weight: 700; }
+h3 { font-size: var(--fs-h3); font-weight: 650; line-height: 1.2; }
+
+/* ---------- Accesibilidad ---------- */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+:root[data-theme="light"] :focus-visible { outline-color: #0B3C5D; }
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Iconos del sprite ---------- */
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
