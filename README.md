@@ -53,7 +53,4 @@ Con `prefers-reduced-motion` activado no hay movimiento y todo se ve desde el pr
 
 ## Pendiente
 
-- **CV**: `assets/cv/CV_Daniel_Martin_Perez.pdf` está excluido de Git (`.gitignore`) porque el PDF
-  actual lleva teléfono y fecha de nacimiento. Hay que subir una versión sin esos datos, o quitar
-  la línea del `.gitignore` si se decide publicarlo tal cual.
 - Los comentarios `TODO:` de `proyectos/tiendas-shopify.html` y `proyectos/domotica.html`.

@@ -1,7 +1,3 @@
-# El CV actual incluye teléfono y fecha de nacimiento: no se sube
-# hasta tener una versión para la web sin esos datos.
-assets/cv/*.pdf
-
 .claude/
 .DS_Store
 Thumbs.db
