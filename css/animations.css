@@ -1,0 +1,80 @@
+/* ==========================================================
+   animations.css — cascada al hacer scroll y entrada de portada
+   Solo se animan transform y opacity: no provocan repintados
+   de diseño y el navegador puede moverlos en la GPU.
+   ========================================================== */
+
+/* ---------- Cascada (reveal) ----------
+   Cuando un .reveal entra en pantalla, reveal.js le pone .is-in y
+   su turno dentro de la tanda (--i): aparece con --i × 100 ms de retraso.
+   Las reglas cuelgan de .js: sin JavaScript todo se ve desde el inicio. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity .7s var(--ease),
+    transform .7s var(--ease);
+  transition-delay: calc(var(--i, 0) * 100ms);
+}
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Cuando la cascada termina, reveal.js quita la clase .reveal:
+   así cada elemento recupera sus transiciones normales (el hover de
+   las tarjetas, por ejemplo) sin heredar el retraso. */
+
+/* ---------- Entrada orquestada de la portada ----------
+   --d marca el orden: saludo, titular, texto + foto, botones. */
+.js .hero-in {
+  opacity: 0;
+  animation: hero-in .8s var(--ease) forwards;
+  animation-delay: calc(var(--d, 0) * 130ms + 120ms);
+}
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Las tarjetas de árbitro caen al final, con giro y un pequeño rebote */
+.js .ref-card {
+  opacity: 0;
+  animation: card-drop .9s cubic-bezier(.3, 1.35, .5, 1) forwards;
+}
+.js .ref-card--red    { animation-delay: .85s; }
+.js .ref-card--yellow { animation-delay: 1s; }
+@keyframes card-drop {
+  from { opacity: 0; transform: translateY(-220px) rotate(calc(var(--r) - 50deg)); }
+  35%  { opacity: 1; }
+  to   { opacity: 1; transform: rotate(var(--r)); }
+}
+
+/* Al pasar por la foto, las tarjetas se abren un poco */
+.hero__visual .ref-card { transition: translate .4s var(--ease), rotate .4s var(--ease); }
+.hero__visual:hover .ref-card--yellow { translate: -6px 0; rotate: -4deg; }
+.hero__visual:hover .ref-card--red    { translate: 8px 0;  rotate: 5deg; }
+
+/* ---------- Movimiento reducido ----------
+   Si el usuario lo pide en su sistema: sin desplazamientos
+   y con todo el contenido visible desde el principio. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .js .reveal,
+  .js .hero-in,
+  .js .ref-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+  .js .ref-card { transform: rotate(var(--r)); }
+
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+  .card:hover, .btn:hover, .next:hover { transform: none; }
+  .card:hover .card__media img { transform: none; }
+}
