@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="shop.metaTitle">Tiendas Shopify · Dani Martín</title>
+  <meta name="description" data-i18n-attr="content=shop.card" content="Tiendas online con temas y secciones a medida en Liquid, campañas de Meta Ads e integración con proveedores de dropshipping.">
+  <meta name="author" content="Daniel Martín Pérez">
+  <meta name="theme-color" content="#072B43">
+  <link rel="canonical" href="https://danimartin03.github.io/proyectos/tiendas-shopify.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://danimartin03.github.io/proyectos/tiendas-shopify.html">
+  <meta property="og:title" content="Tiendas Shopify · Dani Martín">
+  <meta property="og:description" content="Tiendas online con temas y secciones a medida en Liquid, campañas de Meta Ads e integración con proveedores de dropshipping.">
+  <meta property="og:image" content="https://danimartin03.github.io/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Aplica el tema guardado antes de pintar y avisa al CSS de que hay JS -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) { /* sin acceso a localStorage: se queda el tema oscuro */ }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="../" aria-label="Dani Martín, inicio" data-i18n-attr="aria-label=a11y.home">
+        <span class="logo__cards" aria-hidden="true"><i></i><i></i></span>
+        Dani Martín
+      </a>
+
+      <button class="icon-btn header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-i18n-attr="aria-label=a11y.menu">
+        <svg class="icon icon--open" aria-hidden="true"><use href="../assets/icons/sprite.svg#menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="../assets/icons/sprite.svg#close"/></svg>
+      </button>
+
+      <div class="header__menu" id="menu">
+        <nav class="nav" aria-label="Principal" data-i18n-attr="aria-label=a11y.nav">
+          <a class="nav__link is-active" href="../#proyectos" aria-current="true" data-i18n="nav.projects">Proyectos</a>
+          <a class="nav__link" href="../#experiencia" data-i18n="nav.experience">Experiencia</a>
+          <a class="nav__link" href="../#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+          <a class="nav__link" href="../#tecnologias" data-i18n="nav.tech">Tecnologías</a>
+          <a class="nav__link" href="../#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="header__tools">
+          <div class="lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label=a11y.lang">
+            <button class="lang__btn" type="button" data-lang="es" aria-pressed="true" lang="es" title="Castellano">ES</button>
+            <button class="lang__btn" type="button" data-lang="ca" aria-pressed="false" lang="ca" title="Català">CA</button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+          </div>
+          <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar entre tema claro y oscuro" data-i18n-attr="aria-label=a11y.theme">
+            <svg class="icon icon--sun" aria-hidden="true"><use href="../assets/icons/sprite.svg#sun"/></svg>
+            <svg class="icon icon--moon" aria-hidden="true"><use href="../assets/icons/sprite.svg#moon"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <article>
+      <header class="project-hero">
+        <div class="container">
+          <a class="back hero-in" style="--d:0" href="../#proyectos">
+            <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#arrow-left"/></svg>
+            <span data-i18n="p.back">Todos los proyectos</span></a>
+          <h1 class="project-hero__title hero-in" style="--d:1" data-i18n="shop.title">Tiendas Shopify</h1>
+          <p class="project-hero__lead hero-in" style="--d:2" data-i18n="shop.lead">Cuatro tiendas online, dos propias y dos para terceros. En todas me encargué de adaptar el tema con Liquid, conectar el proveedor y preparar las campañas.</p>
+
+          <dl class="meta hero-in" style="--d:4">
+            <div><dt data-i18n="p.year">Año</dt><dd>2026</dd></div>
+            <div><dt data-i18n="p.role">Mi papel</dt><dd data-i18n="shop.role">Montaje y personalización</dd></div>
+            <div><dt data-i18n="p.type">Tipo</dt><dd data-i18n="shop.type">E-commerce</dd></div>
+            <div><dt data-i18n="p.status">Estado</dt><dd data-i18n="shop.status">Cuatro tiendas</dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <div class="container">
+        <figure class="project-cover reveal card__media--browser">
+          <img src="../assets/img/proyectos/tienda-web.webp" width="1280" height="720" alt="Página de inicio de una de mis tiendas en Shopify" data-i18n-attr="alt=shop.coverAlt">
+          <figcaption data-i18n="shop.caption">Página de inicio de una de mis tiendas.</figcaption>
+        </figure>
+      </div>
+
+      <div class="container project-body">
+        <section class="block reveal">
+          <h2 data-i18n="p.context">El contexto</h2>
+          <p data-i18n="shop.ctx1">Son cuatro tiendas: dos propias, que monté para aprender cómo funciona un e-commerce de principio a fin, y dos para otras personas.</p>
+          <p data-i18n="shop.ctx2">Un tema de Shopify recién instalado casi nunca encaja con lo que el producto necesita. Ahí es donde entra Liquid.</p>
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.mine">Qué hice yo</h2>
+          <ul class="list">
+            <li data-i18n="shop.m1"><strong>Temas y secciones en Liquid.</strong> Adapté el tema y creé secciones a medida para la página de inicio y la de producto.</li>
+            <li data-i18n="shop.m2"><strong>Proveedores de dropshipping.</strong> Integré el catálogo y los pedidos con el proveedor.</li>
+            <li data-i18n="shop.m3"><strong>Meta Ads.</strong> Preparé y lancé las campañas de anuncios.</li>
+          </ul>
+          <ul class="tags"><li>Shopify</li><li>Liquid</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Meta Ads</li></ul>
+          <!-- TODO: confirma qué secciones de Liquid hiciste desde cero y detállalas aquí -->
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.learned">Lo que aprendí</h2>
+          <ul class="list">
+            <li data-i18n="shop.l1">Liquid y la estructura de un tema: plantillas, secciones, bloques y ajustes que el dueño de la tienda puede cambiar sin tocar código.</li>
+            <li data-i18n="shop.l2">Una tienda no es solo la web. Producto, anuncios, proveedor y atención al cliente tienen que encajar.</li>
+            <li data-i18n="shop.l3">Trabajar para otra persona obliga a explicar las cosas sin tecnicismos y a dejar la tienda lista para que la gestione sola.</li>
+          </ul>
+        </section>
+
+        <a class="next reveal" href="novudigital.html">
+          <span>
+            <span class="next__label" data-i18n="p.next">Siguiente proyecto</span><br>
+            <span class="next__title">NovuDigital</span>
+          </span>
+          <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#arrow-right"/></svg>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span data-year>2026</span> Daniel Martín Pérez</p>
+      <p data-i18n="footer.made">Hecho a mano con HTML, CSS y JavaScript.</p>
+      <a class="link" href="#contenido" data-i18n="footer.top">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/reveal.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

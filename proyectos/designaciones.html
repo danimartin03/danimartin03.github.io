@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="n8n.metaTitle">Automatización de designaciones arbitrales · Dani Martín</title>
+  <meta name="description" data-i18n-attr="content=n8n.card" content="Un flujo en n8n lee los emails de designación y sus PDF, extrae los datos del partido y los guarda solo en Google Sheets.">
+  <meta name="author" content="Daniel Martín Pérez">
+  <meta name="theme-color" content="#072B43">
+  <link rel="canonical" href="https://danimartin03.github.io/proyectos/designaciones.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://danimartin03.github.io/proyectos/designaciones.html">
+  <meta property="og:title" content="Automatización de designaciones arbitrales · Dani Martín">
+  <meta property="og:description" content="Un flujo en n8n lee los emails de designación y sus PDF, extrae los datos del partido y los guarda solo en Google Sheets.">
+  <meta property="og:image" content="https://danimartin03.github.io/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Aplica el tema guardado antes de pintar y avisa al CSS de que hay JS -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) { /* sin acceso a localStorage: se queda el tema oscuro */ }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="../" aria-label="Dani Martín, inicio" data-i18n-attr="aria-label=a11y.home">
+        <span class="logo__cards" aria-hidden="true"><i></i><i></i></span>
+        Dani Martín
+      </a>
+
+      <button class="icon-btn header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-i18n-attr="aria-label=a11y.menu">
+        <svg class="icon icon--open" aria-hidden="true"><use href="../assets/icons/sprite.svg#menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="../assets/icons/sprite.svg#close"/></svg>
+      </button>
+
+      <div class="header__menu" id="menu">
+        <nav class="nav" aria-label="Principal" data-i18n-attr="aria-label=a11y.nav">
+          <a class="nav__link is-active" href="../#proyectos" aria-current="true" data-i18n="nav.projects">Proyectos</a>
+          <a class="nav__link" href="../#experiencia" data-i18n="nav.experience">Experiencia</a>
+          <a class="nav__link" href="../#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+          <a class="nav__link" href="../#tecnologias" data-i18n="nav.tech">Tecnologías</a>
+          <a class="nav__link" href="../#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="header__tools">
+          <div class="lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label=a11y.lang">
+            <button class="lang__btn" type="button" data-lang="es" aria-pressed="true" lang="es" title="Castellano">ES</button>
+            <button class="lang__btn" type="button" data-lang="ca" aria-pressed="false" lang="ca" title="Català">CA</button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+          </div>
+          <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar entre tema claro y oscuro" data-i18n-attr="aria-label=a11y.theme">
+            <svg class="icon icon--sun" aria-hidden="true"><use href="../assets/icons/sprite.svg#sun"/></svg>
+            <svg class="icon icon--moon" aria-hidden="true"><use href="../assets/icons/sprite.svg#moon"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <article>
+      <header class="project-hero">
+        <div class="container">
+          <a class="back hero-in" style="--d:0" href="../#proyectos">
+            <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#arrow-left"/></svg>
+            <span data-i18n="p.back">Todos los proyectos</span></a>
+          <h1 class="project-hero__title hero-in" style="--d:1" data-i18n="n8n.title">Automatización de designaciones arbitrales</h1>
+          <p class="project-hero__lead hero-in" style="--d:2" data-i18n="n8n.lead">Cada semana recibo por email los partidos que me toca arbitrar. Este flujo lee esos correos y sus PDF adjuntos, saca los datos del partido y los apunta solo en una hoja de cálculo.</p>
+
+          <dl class="meta hero-in" style="--d:4">
+            <div><dt data-i18n="p.year">Año</dt><dd>2024</dd></div>
+            <div><dt data-i18n="p.role">Mi papel</dt><dd data-i18n="n8n.role">Diseño del flujo</dd></div>
+            <div><dt data-i18n="p.type">Tipo</dt><dd data-i18n="n8n.type">Automatización</dd></div>
+            <div><dt data-i18n="p.status">Estado</dt><dd data-i18n="n8n.status">Dos temporadas en uso</dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <div class="container">
+        <figure class="project-cover reveal">
+          <img src="../assets/img/proyectos/designaciones.svg" width="1280" height="720" alt="Esquema del flujo: Gmail, PDF, GPT y Google Sheets" data-i18n-attr="alt=n8n.coverAlt">
+          <figcaption data-i18n="n8n.caption">Esquema del flujo. Es un dibujo mío, no una captura de n8n.</figcaption>
+        </figure>
+      </div>
+
+      <div class="container project-body">
+        <section class="block reveal">
+          <h2 data-i18n="p.problem">El problema</h2>
+          <p data-i18n="n8n.problem1">Como árbitro recibo cada designación en un email con un PDF adjunto. Antes abría cada correo y apuntaba el partido a mano en el calendario.</p>
+          <p data-i18n="n8n.problem2">Era una tarea pequeña, pero se repetía todas las semanas y un despiste con la hora o el campo no es una opción.</p>
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.how">Cómo funciona</h2>
+          <ol class="steps">
+            <li data-i18n="n8n.s1"><strong>Gmail</strong> detecta el email de designación en cuanto llega.</li>
+            <li data-i18n="n8n.s2">El flujo <strong>lee el PDF adjunto</strong> y saca su texto.</li>
+            <li data-i18n="n8n.s3"><strong>GPT</strong> extrae los datos del partido: mi rol (árbitro principal o asistente), categoría, fecha, hora, ubicación, equipo local y equipo visitante.</li>
+            <li data-i18n="n8n.s4">Se añade una fila nueva en <strong>Google Sheets</strong> con todos los campos.</li>
+          </ol>
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.mine">Qué hice yo</h2>
+          <p data-i18n="n8n.mine1">Monté el flujo completo en n8n: el disparador de Gmail, la lectura del PDF, las instrucciones para que GPT devuelva siempre los mismos campos y la escritura en la hoja.</p>
+          <ul class="tags"><li>n8n</li><li>Gmail</li><li>Google Sheets</li><li>GPT</li></ul>
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.result">Resultado</h2>
+          <p data-i18n="n8n.result1">Lo he usado durante dos temporadas. Dejé de copiar partidos a mano y tengo todas mis designaciones en un solo sitio, ordenadas y fáciles de consultar.</p>
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.learned">Lo que aprendí</h2>
+          <ul class="list">
+            <li data-i18n="n8n.l1">Para que una IA sea útil dentro de un proceso hay que pedirle un formato fijo y comprobar lo que devuelve.</li>
+            <li data-i18n="n8n.l2">Automatizar empieza por entender bien el proceso manual, paso a paso.</li>
+            <li data-i18n="n8n.l3">Una automatización pequeña que usas cada semana enseña más que un tutorial largo.</li>
+          </ul>
+        </section>
+
+        <a class="next reveal" href="tiendas-shopify.html">
+          <span>
+            <span class="next__label" data-i18n="p.next">Siguiente proyecto</span><br>
+            <span class="next__title" data-i18n="shop.title">Tiendas Shopify</span>
+          </span>
+          <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#arrow-right"/></svg>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span data-year>2026</span> Daniel Martín Pérez</p>
+      <p data-i18n="footer.made">Hecho a mano con HTML, CSS y JavaScript.</p>
+      <a class="link" href="#contenido" data-i18n="footer.top">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/reveal.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

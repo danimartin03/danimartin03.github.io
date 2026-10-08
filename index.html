@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Dani Martín · Desarrollador web en Palma</title>
+  <meta name="description" data-i18n-attr="content=meta.desc" content="Portfolio de Daniel Martín Pérez, estudiante de DAW en Palma. Proyectos propios: app para iPhone, automatizaciones con n8n y tiendas Shopify.">
+  <meta name="author" content="Daniel Martín Pérez">
+  <meta name="theme-color" content="#072B43">
+  <link rel="canonical" href="https://danimartin03.github.io/">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danimartin03.github.io/">
+  <meta property="og:title" content="Dani Martín · Desarrollador web en Palma">
+  <meta property="og:description" content="Estudiante de DAW. Proyectos propios: app para iPhone, automatizaciones con n8n y tiendas Shopify.">
+  <meta property="og:image" content="https://danimartin03.github.io/assets/img/og.jpg">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dani Martín · Desarrollador web en Palma">
+  <meta name="twitter:description" content="Estudiante de DAW. Proyectos propios: app para iPhone, automatizaciones con n8n y tiendas Shopify.">
+  <meta name="twitter:image" content="https://danimartin03.github.io/assets/img/og.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Se ejecuta antes de pintar: aplica el tema guardado y avisa al CSS de que hay JS -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) { /* sin acceso a localStorage: se queda el tema oscuro */ }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#inicio" aria-label="Dani Martín, inicio" data-i18n-attr="aria-label=a11y.home">
+        <span class="logo__cards" aria-hidden="true"><i></i><i></i></span>
+        Dani Martín
+      </a>
+
+      <button class="icon-btn header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-i18n-attr="aria-label=a11y.menu">
+        <svg class="icon icon--open" aria-hidden="true"><use href="assets/icons/sprite.svg#menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="assets/icons/sprite.svg#close"/></svg>
+      </button>
+
+      <div class="header__menu" id="menu">
+        <nav class="nav" aria-label="Principal" data-i18n-attr="aria-label=a11y.nav">
+          <a class="nav__link" href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+          <a class="nav__link" href="#experiencia" data-i18n="nav.experience">Experiencia</a>
+          <a class="nav__link" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+          <a class="nav__link" href="#tecnologias" data-i18n="nav.tech">Tecnologías</a>
+          <a class="nav__link" href="#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="header__tools">
+          <div class="lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label=a11y.lang">
+            <button class="lang__btn" type="button" data-lang="es" aria-pressed="true" lang="es" title="Castellano">ES</button>
+            <button class="lang__btn" type="button" data-lang="ca" aria-pressed="false" lang="ca" title="Català">CA</button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+          </div>
+          <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar entre tema claro y oscuro" data-i18n-attr="aria-label=a11y.theme">
+            <svg class="icon icon--sun" aria-hidden="true"><use href="assets/icons/sprite.svg#sun"/></svg>
+            <svg class="icon icon--moon" aria-hidden="true"><use href="assets/icons/sprite.svg#moon"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ PORTADA ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="hero__hello hero-in" style="--d:0" data-i18n="hero.hello">Hola, soy Dani</p>
+          <h1 class="hero__title hero-in" style="--d:1">
+            <span data-i18n="hero.title1">Estudiante de DAW</span>
+            <span class="hero__title-sep" aria-hidden="true">·</span>
+            <span class="hero__title-accent" data-i18n="hero.title2">Desarrollador web</span>
+          </h1>
+          <p class="hero__lead hero-in" style="--d:2" data-i18n="hero.lead">Aprendo construyendo: una app para iPhone, automatizaciones con n8n y tiendas online. Vivo en Palma y busco mi primer empleo como desarrollador.</p>
+
+          <ul class="hero__actions hero-in" style="--d:3">
+            <li><a class="btn btn--primary" href="assets/cv/CV_Daniel_Martin_Perez.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#download"/></svg>
+              <span data-i18n="cta.cv">Descargar CV</span></a></li>
+            <li><a class="btn" href="https://www.linkedin.com/in/daniel-martin-perez-b0a5b6442" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin"/></svg>LinkedIn</a></li>
+            <li><a class="btn" href="https://github.com/danimartin03" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#github"/></svg>GitHub</a></li>
+            <li><a class="btn" href="mailto:dmartinperez03@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mail"/></svg>
+              <span data-i18n="cta.email">Email</span></a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__photo hero-in" style="--d:2">
+            <img src="assets/img/dani.webp" width="720" height="900" alt="Retrato de Dani Martín con camiseta negra" data-i18n-attr="alt=hero.photoAlt" fetchpriority="high">
+          </div>
+          <!-- Las dos tarjetas de árbitro: caen al final de la secuencia de entrada -->
+          <div class="ref-card ref-card--red" aria-hidden="true"></div>
+          <p class="ref-card ref-card--yellow" data-i18n="hero.card">Busco mi primer empleo como desarrollador</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section class="section" id="proyectos" aria-labelledby="t-proyectos">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow reveal" data-i18n="projects.eyebrow">Lo que he construido</p>
+          <h2 class="section__title reveal" id="t-proyectos" data-i18n="projects.title">Proyectos</h2>
+          <p class="section__intro reveal" data-i18n="projects.intro">Todos son proyectos propios, hechos para resolver algo que me hacía falta. Cada uno tiene su página con el detalle.</p>
+        </header>
+
+        <div class="projects" data-reveal>
+
+          <article class="card card--featured reveal">
+            <div class="card__media">
+              <img src="assets/img/proyectos/surti-cover.webp" width="1280" height="720" loading="lazy" alt="Tres pantallas de Surti: gastos, mapa de precios y mejor opción" data-i18n-attr="alt=surti.coverAlt">
+              <img class="card__media-hover" src="assets/img/proyectos/surti-web.webp" width="1280" height="720" loading="lazy" alt="">
+              <span class="card__cta" aria-hidden="true"><span data-i18n="projects.view">Ver proyecto</span>
+                <svg class="icon"><use href="assets/icons/sprite.svg#arrow-right"/></svg></span>
+            </div>
+            <div class="card__body">
+              <p class="card__status"><span class="dot dot--yellow"></span><span data-i18n="surti.status">En revisión para App Store</span> · 2026</p>
+              <h3 class="card__title"><a href="proyectos/surti.html">Surti</a></h3>
+              <p class="card__desc" data-i18n="surti.card">App para iPhone que compara los precios oficiales de las gasolineras que tienes cerca y calcula cuál te compensa de verdad, contando precio y distancia.</p>
+              <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label=a11y.techList">
+                <li>Expo</li><li>React Native</li><li>Supabase</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">
+              <img src="assets/img/proyectos/designaciones.svg" width="1280" height="720" loading="lazy" alt="Esquema del flujo: Gmail, PDF, GPT y Google Sheets" data-i18n-attr="alt=n8n.coverAlt">
+              <span class="card__cta" aria-hidden="true"><span data-i18n="projects.view">Ver proyecto</span>
+                <svg class="icon"><use href="assets/icons/sprite.svg#arrow-right"/></svg></span>
+            </div>
+            <div class="card__body">
+              <p class="card__status"><span class="dot dot--green"></span><span data-i18n="n8n.status">Dos temporadas en uso</span> · 2024</p>
+              <h3 class="card__title"><a href="proyectos/designaciones.html" data-i18n="n8n.title">Automatización de designaciones arbitrales</a></h3>
+              <p class="card__desc" data-i18n="n8n.card">Un flujo en n8n lee los emails de designación y sus PDF, extrae los datos del partido y los guarda solo en Google Sheets.</p>
+              <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label=a11y.techList">
+                <li>n8n</li><li>Gmail</li><li>Google Sheets</li><li>GPT</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media card__media--browser">
+              <img src="assets/img/proyectos/tienda-web.webp" width="1280" height="720" loading="lazy" alt="Página de inicio de una de mis tiendas en Shopify" data-i18n-attr="alt=shop.coverAlt">
+              <span class="card__cta" aria-hidden="true"><span data-i18n="projects.view">Ver proyecto</span>
+                <svg class="icon"><use href="assets/icons/sprite.svg#arrow-right"/></svg></span>
+            </div>
+            <div class="card__body">
+              <p class="card__status"><span class="dot"></span><span data-i18n="shop.status">Cuatro tiendas</span> · 2026</p>
+              <h3 class="card__title"><a href="proyectos/tiendas-shopify.html" data-i18n="shop.title">Tiendas Shopify</a></h3>
+              <p class="card__desc" data-i18n="shop.card">Tiendas online con temas y secciones a medida en Liquid, campañas de Meta Ads e integración con proveedores de dropshipping.</p>
+              <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label=a11y.techList">
+                <li>Shopify</li><li>Liquid</li><li>Meta Ads</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media card__media--browser">
+              <img src="assets/img/proyectos/novudigital-web.webp" width="1280" height="720" loading="lazy" alt="Página de inicio de NovuDigital" data-i18n-attr="alt=novu.coverAlt">
+              <span class="card__cta" aria-hidden="true"><span data-i18n="projects.view">Ver proyecto</span>
+                <svg class="icon"><use href="assets/icons/sprite.svg#arrow-right"/></svg></span>
+            </div>
+            <div class="card__body">
+              <p class="card__status"><span class="dot dot--green"></span><span data-i18n="novu.status">Web publicada</span> · 2026</p>
+              <h3 class="card__title"><a href="proyectos/novudigital.html">NovuDigital</a></h3>
+              <p class="card__desc" data-i18n="novu.card">Mi estudio de webs para pequeños negocios: restaurantes, inmobiliarias y tiendas online. Diseñé y programé su web desde cero.</p>
+              <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label=a11y.techList">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">
+              <img src="assets/img/proyectos/domotica.svg" width="1280" height="720" loading="lazy" alt="Ilustración de una casa conectada con seis dispositivos" data-i18n-attr="alt=domo.coverAlt">
+              <span class="card__cta" aria-hidden="true"><span data-i18n="projects.view">Ver proyecto</span>
+                <svg class="icon"><use href="assets/icons/sprite.svg#arrow-right"/></svg></span>
+            </div>
+            <div class="card__body">
+              <p class="card__status"><span class="dot dot--green"></span><span data-i18n="domo.status">En uso en casa</span></p>
+              <h3 class="card__title"><a href="proyectos/domotica.html" data-i18n="domo.title">Domótica</a></h3>
+              <p class="card__desc" data-i18n="domo.card">Automatización de mi habitación con dispositivos inteligentes y puesta en marcha de los del hogar de un familiar.</p>
+              <ul class="tags" aria-label="Tecnologías" data-i18n-attr="aria-label=a11y.techList">
+                <li>Shelly</li><li>Google Home</li><li>Alexa</li><li>SmartThings</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCIA Y FORMACIÓN ============ -->
+    <section class="section section--alt" id="experiencia" aria-labelledby="t-experiencia">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow reveal" data-i18n="exp.eyebrow">Trayectoria</p>
+          <h2 class="section__title reveal" id="t-experiencia" data-i18n="exp.title">Experiencia</h2>
+        </header>
+
+        <div class="split">
+          <ol class="timeline" data-reveal>
+            <li class="timeline__item reveal">
+              <p class="timeline__date" data-i18n="exp.dev.date">2023 – actualidad</p>
+              <h3 class="timeline__role" data-i18n="exp.dev.role">Desarrollador de proyectos propios</h3>
+              <p class="timeline__org" data-i18n="exp.dev.org">Por cuenta propia</p>
+              <ul class="list">
+                <li data-i18n="exp.dev.b1">Surti, una app para iPhone hecha con Expo y Supabase, probada con usuarios reales en TestFlight y en revisión para App Store.</li>
+                <li data-i18n="exp.dev.b2">Automatizaciones con n8n que uso cada semana, como el registro de mis designaciones arbitrales.</li>
+                <li data-i18n="exp.dev.b3">Cuatro tiendas Shopify, dos propias y dos para terceros, con secciones a medida en Liquid.</li>
+                <li data-i18n="exp.dev.b4">NovuDigital, un estudio de webs para pequeños negocios con web propia en HTML, CSS y JavaScript.</li>
+              </ul>
+            </li>
+            <li class="timeline__item reveal">
+              <p class="timeline__date" data-i18n="exp.ref.date">2019 – actualidad</p>
+              <h3 class="timeline__role" data-i18n="exp.ref.role">Árbitro de fútbol</h3>
+              <p class="timeline__org" data-i18n="exp.ref.org">Federación de Fútbol de las Islas Baleares (FFIB) · Fines de semana</p>
+              <ul class="list">
+                <li data-i18n="exp.ref.b1">Fútbol base de 2019 a 2023 y, desde entonces, ascensos por las categorías regionales hasta División de Honor Preferente.</li>
+                <li data-i18n="exp.ref.b2">Temporada 2026/27: 3ª RFEF y Curso de Talentos del CTA-FFIB.</li>
+                <li data-i18n="exp.ref.b3">Decisión rápida, gestión de conflictos y trabajo bajo presión cada fin de semana.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="edu" data-reveal>
+            <h3 class="edu__title reveal" data-i18n="edu.title">Formación</h3>
+            <ul class="edu__list">
+              <li class="edu__item reveal">
+                <p class="timeline__date" data-i18n="edu.daw.date">2024 – actualidad</p>
+                <p class="edu__name" data-i18n="edu.daw.name">CFGS Desarrollo de Aplicaciones Web (DAW)</p>
+                <p class="edu__org">Es Liceu</p>
+              </li>
+              <li class="edu__item reveal">
+                <p class="timeline__date">2022 – 2024</p>
+                <p class="edu__name" data-i18n="edu.bach.name">Bachillerato de Humanidades y Ciencias Sociales</p>
+                <p class="edu__org">IES Sant Marçal</p>
+              </li>
+              <li class="edu__item reveal">
+                <p class="timeline__date">2018 – 2022</p>
+                <p class="edu__name" data-i18n="edu.eso.name">Educación Secundaria Obligatoria (ESO)</p>
+                <p class="edu__org">IES Sant Marçal</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section" id="sobre-mi" aria-labelledby="t-sobre-mi">
+      <div class="container about" data-reveal>
+        <div class="about__photo reveal">
+          <img src="assets/img/dani.webp" width="720" height="900" loading="lazy" alt="Dani Martín" >
+        </div>
+        <div class="about__text">
+          <p class="eyebrow reveal" data-i18n="about.eyebrow">Quién soy</p>
+          <h2 class="section__title reveal" id="t-sobre-mi" data-i18n="about.title">Sobre mí</h2>
+          <p class="reveal" data-i18n="about.p1">Soy Dani, de Palma. Estudio Desarrollo de Aplicaciones Web y, fuera de clase, construyo cosas que me hacen falta: una app para saber dónde repostar, un flujo que apunta mis partidos por mí o una tienda online.</p>
+          <p class="reveal" data-i18n="about.p2">Aprendo mejor con un problema real delante. Si no sé algo, lo busco, lo pruebo y lo rompo hasta entenderlo. Uso la IA a diario como herramienta de trabajo, y me aseguro de entender lo que acabo publicando.</p>
+          <p class="reveal" data-i18n="about.p3">Desde 2019 soy árbitro de fútbol y esta temporada estoy en 3ª RFEF. Arbitrar me ha enseñado a decidir en un segundo, a mantener la calma cuando nadie está de acuerdo conmigo y a asumir mis errores. Todo eso me lo llevo también al trabajo en equipo.</p>
+
+          <dl class="facts reveal">
+            <div><dt data-i18n="facts.langs">Idiomas</dt>
+              <dd data-i18n="facts.langsV">Castellano (lengua materna), catalán B2 certificado e inglés intermedio</dd></div>
+            <div><dt data-i18n="facts.where">Ubicación</dt>
+              <dd data-i18n="facts.whereV">Palma, Mallorca</dd></div>
+            <div><dt data-i18n="facts.car">Movilidad</dt>
+              <dd data-i18n="facts.carV">Carnet de conducir y vehículo propio</dd></div>
+            <div><dt data-i18n="facts.avail">Disponibilidad</dt>
+              <dd data-i18n="facts.availV">Incorporación inmediata</dd></div>
+          </dl>
+
+          <p class="reveal"><a class="btn btn--primary" href="assets/cv/CV_Daniel_Martin_Perez.pdf" download>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#download"/></svg>
+            <span data-i18n="cta.cv">Descargar CV</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECNOLOGÍAS ============ -->
+    <section class="section section--alt" id="tecnologias" aria-labelledby="t-tecnologias">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow reveal" data-i18n="tech.eyebrow">Con qué trabajo</p>
+          <h2 class="section__title reveal" id="t-tecnologias" data-i18n="tech.title">Tecnologías</h2>
+        </header>
+
+        <!-- El icono de cada tecnología es un distintivo hecho con CSS: --c es su color -->
+        <div class="tech" data-reveal>
+          <section class="tech__group reveal" aria-labelledby="tg-1">
+            <h3 class="tech__title" id="tg-1" data-i18n="tech.langs">Lenguajes</h3>
+            <ul class="tech__list">
+              <li><span class="badge" style="--c:#E44D26" aria-hidden="true">H5</span>HTML</li>
+              <li><span class="badge" style="--c:#2965F1" aria-hidden="true">C3</span>CSS</li>
+              <li><span class="badge badge--dark" style="--c:#F7DF1E" aria-hidden="true">JS</span>JavaScript</li>
+              <li><span class="badge" style="--c:#5B6B7A" aria-hidden="true">{ }</span>JSON</li>
+              <li><span class="badge" style="--c:#E76F00" aria-hidden="true">Jv</span>Java</li>
+              <li><span class="badge" style="--c:#336791" aria-hidden="true">SQL</span>SQL</li>
+              <li><span class="badge" style="--c:#5E8E3E" aria-hidden="true">Lq</span>Liquid</li>
+              <li><span class="badge" style="--c:#3776AB" aria-hidden="true">Py</span>Python</li>
+            </ul>
+          </section>
+          <section class="tech__group reveal" aria-labelledby="tg-2">
+            <h3 class="tech__title" id="tg-2" data-i18n="tech.tools">Herramientas</h3>
+            <ul class="tech__list">
+              <li><span class="badge" style="--c:#F05032" aria-hidden="true">Git</span>Git</li>
+              <li><span class="badge" style="--c:#24292F" aria-hidden="true">GH</span>GitHub</li>
+              <li><span class="badge" style="--c:#EA4B71" aria-hidden="true">n8n</span>n8n</li>
+              <li><span class="badge" style="--c:#1B1F23" aria-hidden="true">Ex</span>Expo</li>
+              <li><span class="badge badge--dark" style="--c:#61DAFB" aria-hidden="true">RN</span>React Native</li>
+              <li><span class="badge badge--dark" style="--c:#3ECF8E" aria-hidden="true">Sb</span>Supabase</li>
+              <li><span class="badge" style="--c:#5E8E3E" aria-hidden="true">Sh</span>Shopify</li>
+            </ul>
+          </section>
+          <section class="tech__group reveal" aria-labelledby="tg-3">
+            <h3 class="tech__title" id="tg-3" data-i18n="tech.ai">Herramientas de IA</h3>
+            <ul class="tech__list">
+              <li><span class="badge" style="--c:#10A37F" aria-hidden="true">GPT</span>ChatGPT</li>
+              <li><span class="badge" style="--c:#C96442" aria-hidden="true">Cl</span>Claude</li>
+              <li><span class="badge" style="--c:#1B1F23" aria-hidden="true">11</span>ElevenLabs</li>
+            </ul>
+          </section>
+          <section class="tech__group tech__group--learning reveal" aria-labelledby="tg-4">
+            <h3 class="tech__title" id="tg-4" data-i18n="tech.learning">Aprendiendo ahora</h3>
+            <ul class="tech__list">
+              <li><span class="badge" style="--c:#777BB4" aria-hidden="true">PHP</span>PHP</li>
+              <li><span class="badge" style="--c:#3178C6" aria-hidden="true">TS</span>TypeScript</li>
+              <li><span class="badge" style="--c:#F05138" aria-hidden="true">Sw</span>Swift</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto" aria-labelledby="t-contacto">
+      <div class="container" data-reveal>
+        <p class="eyebrow reveal" data-i18n="contact.eyebrow">Contacto</p>
+        <h2 class="section__title reveal" id="t-contacto" data-i18n="contact.title">¿Hablamos?</h2>
+        <p class="section__intro reveal" data-i18n="contact.intro">Busco mi primer empleo como desarrollador web. Escríbeme y te respondo en cuanto pueda.</p>
+        <p class="reveal"><a class="contact__mail" href="mailto:dmartinperez03@gmail.com">dmartinperez03@gmail.com</a></p>
+        <ul class="hero__actions reveal">
+          <li><a class="btn" href="https://www.linkedin.com/in/daniel-martin-perez-b0a5b6442" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin"/></svg>LinkedIn</a></li>
+          <li><a class="btn" href="https://github.com/danimartin03" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#github"/></svg>GitHub</a></li>
+          <li><a class="btn btn--primary" href="assets/cv/CV_Daniel_Martin_Perez.pdf" download>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#download"/></svg>
+            <span data-i18n="cta.cv">Descargar CV</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span data-year>2026</span> Daniel Martín Pérez</p>
+      <p data-i18n="footer.made">Hecho a mano con HTML, CSS y JavaScript.</p>
+      <a class="link" href="#inicio" data-i18n="footer.top">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

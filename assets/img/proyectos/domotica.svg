@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <!-- Ilustración propia: dispositivos conectados alrededor de casa. -->
+  <rect width="1280" height="720" fill="#072B43"/>
+  <g fill="none" stroke="#9DB7C8" stroke-opacity=".18" stroke-width="2">
+    <circle cx="640" cy="360" r="150"/><circle cx="640" cy="360" r="260"/><circle cx="640" cy="360" r="380"/>
+  </g>
+  <g stroke="#FFC72C" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 12" fill="none">
+    <path d="M640 360 300 200M640 360 980 200M640 360 250 440M640 360 1030 440M640 360 460 610M640 360 820 610"/>
+  </g>
+
+  <!-- Casa -->
+  <circle cx="640" cy="360" r="92" fill="#0B3C5D" stroke="#FFC72C" stroke-width="3"/>
+  <path d="M596 366l44-40 44 40v38h-28v-26h-32v26h-28z" fill="none" stroke="#EAF2F7" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Dispositivos -->
+  <g font-size="21" font-weight="600" fill="#EAF2F7" text-anchor="middle">
+    <g transform="translate(300 200)"><rect x="-110" y="-34" width="220" height="68" rx="34" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".4" stroke-width="2"/><text y="7">Shelly Plug S</text></g>
+    <g transform="translate(980 200)"><rect x="-110" y="-34" width="220" height="68" rx="34" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".4" stroke-width="2"/><text y="7">Shelly H&amp;T</text></g>
+    <g transform="translate(250 440)"><rect x="-110" y="-34" width="220" height="68" rx="34" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".4" stroke-width="2"/><text y="7">Alexa</text></g>
+    <g transform="translate(1030 440)"><rect x="-110" y="-34" width="220" height="68" rx="34" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".4" stroke-width="2"/><text y="7">Google Home</text></g>
+    <g transform="translate(460 610)"><rect x="-110" y="-34" width="220" height="68" rx="34" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".4" stroke-width="2"/><text y="7">Google Nest</text></g>
+    <g transform="translate(820 610)"><rect x="-110" y="-34" width="220" height="68" rx="34" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".4" stroke-width="2"/><text y="7">SmartThings</text></g>
+  </g>
+</svg>

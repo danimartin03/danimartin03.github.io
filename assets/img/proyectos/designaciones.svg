@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <!-- Esquema propio del flujo (no es una captura de n8n). -->
+  <rect width="1280" height="720" fill="#072B43"/>
+  <g fill="none" stroke="#9DB7C8" stroke-opacity=".12">
+    <path d="M0 120h1280M0 240h1280M0 360h1280M0 480h1280M0 600h1280M160 0v720M320 0v720M480 0v720M640 0v720M800 0v720M960 0v720M1120 0v720"/>
+  </g>
+
+  <!-- Conexiones -->
+  <g fill="none" stroke="#FFC72C" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 14">
+    <path d="M300 250h70M590 250h70M880 250h70"/>
+  </g>
+
+  <!-- Nodos -->
+  <g>
+    <g transform="translate(90 170)">
+      <rect width="210" height="160" rx="20" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".35" stroke-width="2"/>
+      <path d="M70 52h70v48H70z M70 54l35 26 35-26" fill="none" stroke="#EAF2F7" stroke-width="5" stroke-linejoin="round"/>
+      <text x="105" y="134" text-anchor="middle" fill="#EAF2F7" font-size="22" font-weight="600">Gmail</text>
+    </g>
+    <g transform="translate(380 170)">
+      <rect width="210" height="160" rx="20" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".35" stroke-width="2"/>
+      <path d="M82 40h34l18 18v46H82z M116 40v18h18" fill="none" stroke="#EAF2F7" stroke-width="5" stroke-linejoin="round"/>
+      <text x="105" y="134" text-anchor="middle" fill="#EAF2F7" font-size="22" font-weight="600">PDF</text>
+    </g>
+    <g transform="translate(670 170)">
+      <rect width="210" height="160" rx="20" fill="#0B3C5D" stroke="#FFC72C" stroke-width="2.500"/>
+      <path d="M105 38l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" fill="#FFC72C"/>
+      <text x="105" y="134" text-anchor="middle" fill="#EAF2F7" font-size="22" font-weight="600">GPT</text>
+    </g>
+    <g transform="translate(960 170)">
+      <rect width="230" height="160" rx="20" fill="#0B3C5D" stroke="#9DB7C8" stroke-opacity=".35" stroke-width="2"/>
+      <path d="M80 44h70v56H80z M80 62h70M80 81h70M103 44v56" fill="none" stroke="#EAF2F7" stroke-width="5" stroke-linejoin="round"/>
+      <text x="115" y="134" text-anchor="middle" fill="#EAF2F7" font-size="22" font-weight="600">Google Sheets</text>
+    </g>
+  </g>
+
+  <!-- Fila resultante -->
+  <g transform="translate(90 430)">
+    <rect width="1100" height="170" rx="20" fill="#06243A" stroke="#9DB7C8" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M0 62h1100" stroke="#9DB7C8" stroke-opacity=".25" stroke-width="2"/>
+    <g fill="#9DB7C8" font-size="18" font-weight="600">
+      <text x="28" y="40">Rol</text><text x="188" y="40">Categoría</text><text x="368" y="40">Fecha</text>
+      <text x="498" y="40">Hora</text><text x="608" y="40">Campo</text><text x="788" y="40">Local</text><text x="948" y="40">Visitante</text>
+    </g>
+    <g fill="#EAF2F7" fill-opacity=".85">
+      <rect x="28" y="92" width="120" height="16" rx="8"/><rect x="188" y="92" width="140" height="16" rx="8"/>
+      <rect x="368" y="92" width="90" height="16" rx="8"/><rect x="498" y="92" width="70" height="16" rx="8"/>
+      <rect x="608" y="92" width="140" height="16" rx="8"/><rect x="788" y="92" width="120" height="16" rx="8"/>
+      <rect x="948" y="92" width="120" height="16" rx="8"/>
+    </g>
+    <g fill="#9DB7C8" fill-opacity=".35">
+      <rect x="28" y="128" width="90" height="14" rx="7"/><rect x="188" y="128" width="110" height="14" rx="7"/>
+      <rect x="368" y="128" width="90" height="14" rx="7"/><rect x="498" y="128" width="70" height="14" rx="7"/>
+      <rect x="608" y="128" width="110" height="14" rx="7"/><rect x="788" y="128" width="100" height="14" rx="7"/>
+      <rect x="948" y="128" width="90" height="14" rx="7"/>
+    </g>
+  </g>
+  <path d="M1075 330v100" stroke="#FFC72C" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 14" fill="none"/>
+  <text x="90" y="110" fill="#9DB7C8" font-size="22" font-weight="600" letter-spacing="3">n8n · FLUJO</text>
+</svg>
