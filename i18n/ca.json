@@ -207,5 +207,27 @@
   "domo.mine2": "A casa d'un familiar vaig fer la posada en marxa completa: donar d'alta cada dispositiu, organitzar-los per habitacions i deixar-ho tot explicat perquè ho facin servir sense ajuda.",
   "domo.l1": "Cada marca té la seva aplicació i la seva manera de fer les coses. El difícil és que s'entenguin entre elles.",
   "domo.l2": "Una automatització es pensa igual que un programa: una condició, una acció i els casos en què pot fallar.",
-  "domo.l3": "Si la persona que ho ha de fer servir no ho entén, no serveix. El que és senzill guanya."
+  "domo.l3": "Si la persona que ho ha de fer servir no ho entén, no serveix. El que és senzill guanya.",
+
+  "conv.coverAlt": "Il·lustració d'una imatge grossa que es converteix en una altra de més lleugera, amb els formats WebP, JPG, PNG i ICO",
+  "conv.status": "Publicat",
+  "conv.title": "Convertidor d'imatges",
+  "conv.card": "Eina web per convertir, comprimir i redimensionar imatges sense pujar-les a cap servidor: tot es fa al navegador.",
+  "p.demo": "Provar la demo",
+  "p.code": "Veure el codi",
+  "conv.metaTitle": "Convertidor d'imatges · Dani Martín",
+  "conv.lead": "Una eina web per convertir i comprimir imatges sense pujar-les a cap servidor. Tota la feina es fa al navegador, així que les fotos no surten del dispositiu.",
+  "conv.role": "Disseny i desenvolupament",
+  "conv.type": "Eina web",
+  "conv.w1": "<strong>Converteix</strong> diverses imatges alhora a WebP, JPG, PNG o ICO.",
+  "conv.w2": "<strong>Comprimeix i redimensiona</strong>: qualitat ajustable i mida per amplada, alçada, encaix o percentatge, sense deformar la imatge.",
+  "conv.w3": "<strong>Fons</strong> transparent o d'un color, i opció de tornar transparent un color de la imatge.",
+  "conv.w4": "<strong>Abans i després</strong> amb el pes, les mides i l'estalvi, i un comparador amb lliscador.",
+  "conv.w5": "<strong>Descàrrega</strong> de cada imatge o de totes juntes en un ZIP.",
+  "conv.how1": "Cada imatge es pinta en un <code>canvas</code> de la mida final i el mateix navegador la torna en el format triat. Les imatges es converteixen d'una en una per no omplir la memòria.",
+  "conv.how2": "El format ICO no el sap crear el navegador, així que escric a mà la capçalera del fitxer i hi pos dins un PNG.",
+  "conv.how3": "Està feta amb HTML, CSS i JavaScript sense frameworks. Es fa servir tota amb el teclat i té tema clar i fosc.",
+  "conv.l1": "Fer feina amb fitxers al navegador: <code>File</code>, <code>Blob</code> i <code>canvas</code>, alliberant la memòria que ja no es fa servir.",
+  "conv.l2": "Llegir i canviar els píxels d'una imatge un a un per llevar un color.",
+  "conv.l3": "Pensar en el que pot fallar: fitxers que no són imatges, formats que el navegador no obre, imatges enormes i camps buits."
 }

@@ -207,5 +207,27 @@
   "domo.mine2": "At a relative's home I did the full setup: adding each device, organising them by room and explaining everything so they can use it without help.",
   "domo.l1": "Every brand has its own app and its own way of doing things. The hard part is getting them to work with each other.",
   "domo.l2": "You design an automation the same way as a program: a condition, an action and the cases where it can fail.",
-  "domo.l3": "If the person who is going to use it doesn't understand it, it's no use. Simple wins."
+  "domo.l3": "If the person who is going to use it doesn't understand it, it's no use. Simple wins.",
+
+  "conv.coverAlt": "Illustration of a large image turning into a lighter one, with the WebP, JPG, PNG and ICO formats",
+  "conv.status": "Live",
+  "conv.title": "Image converter",
+  "conv.card": "A web tool to convert, compress and resize images without uploading them to any server: everything happens in the browser.",
+  "p.demo": "Try the demo",
+  "p.code": "View the code",
+  "conv.metaTitle": "Image converter · Dani Martín",
+  "conv.lead": "A web tool to convert and compress images without uploading them to any server. All the work happens in the browser, so the photos never leave the device.",
+  "conv.role": "Design and development",
+  "conv.type": "Web tool",
+  "conv.w1": "<strong>Converts</strong> several images at once to WebP, JPG, PNG or ICO.",
+  "conv.w2": "<strong>Compresses and resizes</strong>: adjustable quality and size by width, height, fit or percentage, without distorting the image.",
+  "conv.w3": "<strong>Background</strong> transparent or a solid colour, plus an option to make one colour of the image transparent.",
+  "conv.w4": "<strong>Before and after</strong> with file size, dimensions and savings, and a comparison slider.",
+  "conv.w5": "<strong>Download</strong> each image or all of them together in a ZIP.",
+  "conv.how1": "Each image is drawn on a <code>canvas</code> at its final size and the browser itself returns it in the chosen format. Images are converted one at a time so memory does not fill up.",
+  "conv.how2": "The browser can't create ICO files, so I write the file header by hand and put a PNG inside.",
+  "conv.how3": "It is built with HTML, CSS and JavaScript with no frameworks. It works entirely with the keyboard and has a light and a dark theme.",
+  "conv.l1": "Working with files in the browser: <code>File</code>, <code>Blob</code> and <code>canvas</code>, freeing the memory that is no longer needed.",
+  "conv.l2": "Reading and changing the pixels of an image one by one to remove a colour.",
+  "conv.l3": "Thinking about what can go wrong: files that are not images, formats the browser cannot open, huge images and empty fields."
 }
