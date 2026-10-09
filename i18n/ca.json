@@ -229,5 +229,25 @@
   "conv.how3": "Està feta amb HTML, CSS i JavaScript sense frameworks. Es fa servir tota amb el teclat i té tema clar i fosc.",
   "conv.l1": "Fer feina amb fitxers al navegador: <code>File</code>, <code>Blob</code> i <code>canvas</code>, alliberant la memòria que ja no es fa servir.",
   "conv.l2": "Llegir i canviar els píxels d'una imatge un a un per llevar un color.",
-  "conv.l3": "Pensar en el que pot fallar: fitxers que no són imatges, formats que el navegador no obre, imatges enormes i camps buits."
+  "conv.l3": "Pensar en el que pot fallar: fitxers que no són imatges, formats que el navegador no obre, imatges enormes i camps buits.",
+
+  "gast.coverAlt": "Pantalla de balanç de Despeses compartides, amb el que deu o li deuen a cada persona d'un grup d'exemple",
+  "gast.status": "Publicat",
+  "gast.title": "Despeses compartides",
+  "gast.card": "App web per repartir les despeses d'un viatge o d'un pis i calcular qui paga a qui. Tot es desa al navegador.",
+  "gast.metaTitle": "Despeses compartides · Dani Martín",
+  "gast.lead": "Una app web per apuntar les despeses d'un viatge o d'un pis entre diverses persones i saber qui paga a qui per quedar en pau. No té servidor: les dades es desen al navegador.",
+  "gast.role": "Disseny i desenvolupament",
+  "gast.type": "Aplicació web",
+  "gast.w1": "<strong>Diversos grups</strong> alhora, cadascun amb les seves persones i les seves despeses.",
+  "gast.w2": "<strong>Quatre maneres de repartir</strong>: a parts iguals, cadascú un import, per percentatges o per parts.",
+  "gast.w3": "<strong>Balanç</strong> de cada persona: el que ha posat, el que li tocava i el que deu o li deuen.",
+  "gast.w4": "<strong>Pagaments per quedar en pau</strong>, que es poden marcar com a fets.",
+  "gast.w5": "<strong>Exportar i importar</strong> un grup en JSON i copiar un resum per enviar-lo per WhatsApp.",
+  "gast.how1": "Per dins tots els doblers van en cèntims enters, per evitar els errors dels decimals en JavaScript. Quan un import no es divideix exacte, els cèntims que sobren es reparteixen d'un en un i la suma sempre quadra.",
+  "gast.how2": "Per decidir els pagaments, qui més deu paga a qui més li deuen, i es repeteix fins que tothom queda a zero. Dona pocs pagaments i es pot explicar en un minut, tot i que no garanteix sempre el mínim possible.",
+  "gast.how3": "Està feta amb HTML, CSS i JavaScript sense frameworks ni llibreries. El codi que fa els comptes està separat del que pinta la pàgina.",
+  "gast.l1": "Per què no es fan comptes de doblers amb decimals i com evitar-ho.",
+  "gast.l2": "Pensar un algorisme senzill, explicar-lo pas a pas i saber fins on arriba.",
+  "gast.l3": "No fiar-me de les dades que venen de fora: revis sencer un fitxer importat abans de fer-lo servir."
 }

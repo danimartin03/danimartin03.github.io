@@ -229,5 +229,25 @@
   "conv.how3": "It is built with HTML, CSS and JavaScript with no frameworks. It works entirely with the keyboard and has a light and a dark theme.",
   "conv.l1": "Working with files in the browser: <code>File</code>, <code>Blob</code> and <code>canvas</code>, freeing the memory that is no longer needed.",
   "conv.l2": "Reading and changing the pixels of an image one by one to remove a colour.",
-  "conv.l3": "Thinking about what can go wrong: files that are not images, formats the browser cannot open, huge images and empty fields."
+  "conv.l3": "Thinking about what can go wrong: files that are not images, formats the browser cannot open, huge images and empty fields.",
+
+  "gast.coverAlt": "Balance screen of the shared expenses app, showing what each person in a sample group owes or is owed",
+  "gast.status": "Live",
+  "gast.title": "Shared expenses",
+  "gast.card": "A web app to split the expenses of a trip or a shared flat and work out who pays whom. Everything is stored in the browser.",
+  "gast.metaTitle": "Shared expenses · Dani Martín",
+  "gast.lead": "A web app to keep track of the expenses of a trip or a shared flat between several people and find out who pays whom to settle up. There is no server: the data is stored in the browser.",
+  "gast.role": "Design and development",
+  "gast.type": "Web application",
+  "gast.w1": "<strong>Several groups</strong> at once, each with its own people and expenses.",
+  "gast.w2": "<strong>Four ways to split</strong>: equally, by exact amounts, by percentages or by shares.",
+  "gast.w3": "<strong>Balance</strong> for each person: what they paid, what their share was and what they owe or are owed.",
+  "gast.w4": "<strong>Payments to settle up</strong>, which can be marked as done.",
+  "gast.w5": "<strong>Export and import</strong> a group as JSON and copy a summary to send over WhatsApp.",
+  "gast.how1": "Internally all money is kept in whole cents, to avoid decimal errors in JavaScript. When an amount does not divide evenly, the leftover cents are handed out one at a time so the total always adds up.",
+  "gast.how2": "To decide the payments, whoever owes the most pays whoever is owed the most, and this repeats until everyone is at zero. It gives few payments and can be explained in a minute, although it does not always guarantee the fewest possible.",
+  "gast.how3": "It is built with HTML, CSS and JavaScript with no frameworks or libraries. The code that does the maths is kept apart from the code that draws the page.",
+  "gast.l1": "Why you should not do money maths with decimals, and how to avoid it.",
+  "gast.l2": "Designing a simple algorithm, explaining it step by step and knowing its limits.",
+  "gast.l3": "Not trusting data that comes from outside: I check an imported file in full before using it."
 }
