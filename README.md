@@ -1,7 +1,15 @@
 # Portfolio de Dani Martín
 
 Web personal de Daniel Martín Pérez: una página principal y una página por proyecto.
-Hecha con HTML, CSS y JavaScript sin frameworks ni proceso de compilación, lista para GitHub Pages.
+
+**Web:** https://danimartin03.github.io
+
+## Cómo está hecha
+
+- HTML, CSS y JavaScript sin frameworks ni proceso de compilación.
+- En tres idiomas: castellano, catalán e inglés.
+- Tema claro y oscuro, y diseño pensado primero para móvil.
+- Publicada con GitHub Pages.
 
 ## Estructura
 
@@ -12,45 +20,16 @@ css/
   base.css            Variables de color y tipografía, reset, foco
   layout.css          Cabecera, secciones, portada, pie
   components.css      Botones, tarjetas, línea de tiempo, tecnologías, página de proyecto
-  animations.css      Cascada al hacer scroll, entrada de la portada, movimiento reducido
+  animations.css      Animaciones al hacer scroll y entrada de la portada
 js/
-  theme.js            Botón de tema claro/oscuro (se recuerda en localStorage)
+  theme.js            Botón de tema claro/oscuro
   i18n.js             Selector de idioma ES / CA / EN
-  reveal.js           Animación en cascada (IntersectionObserver) y enlace activo del menú
+  reveal.js           Animaciones al hacer scroll y enlace activo del menú
   main.js             Menú móvil y barra de progreso de scroll
 i18n/
   ca.json, en.json    Traducciones. El castellano está en el propio HTML
 assets/
   img/                Foto, capturas e ilustraciones
   icons/sprite.svg    Iconos
-  cv/                 CV en PDF (ver "Pendiente")
+  cv/                 CV en PDF
 ```
-
-## Verla en local
-
-Las traducciones se cargan con `fetch`, así que hace falta un servidor (con doble clic sobre
-`index.html` la web funciona, pero solo en castellano):
-
-```bash
-python -m http.server 5500
-```
-
-Después abre `http://localhost:5500`.
-
-## Cambiar textos
-
-1. Edita el texto en castellano en el HTML.
-2. Busca su clave (`data-i18n="..."`) y cambia la misma clave en `i18n/ca.json` e `i18n/en.json`.
-
-Si una clave falta en una traducción, se muestra el texto en castellano.
-
-## Cómo funciona la cascada
-
-Cada elemento animado lleva la clase `.reveal`. `reveal.js` los observa con `IntersectionObserver`;
-cuando varios entran en pantalla a la vez, les da un turno (`--i`) y el CSS aplica
-`transition-delay: calc(var(--i) * 100ms)`. Solo se animan `opacity` y `transform`.
-Con `prefers-reduced-motion` activado no hay movimiento y todo se ve desde el principio.
-
-## Pendiente
-
-- Los comentarios `TODO:` de `proyectos/tiendas-shopify.html` y `proyectos/domotica.html`.
