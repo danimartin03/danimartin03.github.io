@@ -209,7 +209,7 @@
   "domo.l2": "Una automatització es pensa igual que un programa: una condició, una acció i els casos en què pot fallar.",
   "domo.l3": "Si la persona que ho ha de fer servir no ho entén, no serveix. El que és senzill guanya.",
 
-  "conv.coverAlt": "Il·lustració d'una imatge grossa que es converteix en una altra de més lleugera, amb els formats WebP, JPG, PNG i ICO",
+  "conv.coverAlt": "Pantalla del convertidor d'imatges, amb els ajusts a l'esquerra i la zona per arrossegar les imatges",
   "conv.status": "Publicat",
   "conv.title": "Convertidor d'imatges",
   "conv.card": "Eina web per convertir, comprimir i redimensionar imatges sense pujar-les a cap servidor: tot es fa al navegador.",

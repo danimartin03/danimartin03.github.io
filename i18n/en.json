@@ -209,7 +209,7 @@
   "domo.l2": "You design an automation the same way as a program: a condition, an action and the cases where it can fail.",
   "domo.l3": "If the person who is going to use it doesn't understand it, it's no use. Simple wins.",
 
-  "conv.coverAlt": "Illustration of a large image turning into a lighter one, with the WebP, JPG, PNG and ICO formats",
+  "conv.coverAlt": "Screen of the image converter, with the settings on the left and the area to drop the images",
   "conv.status": "Live",
   "conv.title": "Image converter",
   "conv.card": "A web tool to convert, compress and resize images without uploading them to any server: everything happens in the browser.",
