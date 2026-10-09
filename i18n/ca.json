@@ -249,5 +249,25 @@
   "gast.how3": "Està feta amb HTML, CSS i JavaScript sense frameworks ni llibreries. El codi que fa els comptes està separat del que pinta la pàgina.",
   "gast.l1": "Per què no es fan comptes de doblers amb decimals i com evitar-ho.",
   "gast.l2": "Pensar un algorisme senzill, explicar-lo pas a pas i saber fins on arriba.",
-  "gast.l3": "No fiar-me de les dades que venen de fora: revis sencer un fitxer importat abans de fer-lo servir."
+  "gast.l3": "No fiar-me de les dades que venen de fora: revis sencer un fitxer importat abans de fer-lo servir.",
+
+  "kan.coverAlt": "Tauler Kanban amb tres columnes i targetes de colors amb etiquetes i dates límit",
+  "kan.status": "Publicat",
+  "kan.title": "Tauler Kanban",
+  "kan.card": "Tauler Kanban amb targetes que s'arrosseguen amb ratolí, dit o teclat. Fet amb Pointer Events i sense llibreries.",
+  "kan.metaTitle": "Tauler Kanban · Dani Martín",
+  "kan.lead": "Un tauler Kanban amb columnes i targetes que es mouen arrossegant amb el ratolí, amb el dit o amb el teclat. No té servidor: el tauler es desa al navegador.",
+  "kan.role": "Disseny i desenvolupament",
+  "kan.type": "Aplicació web",
+  "kan.w1": "<strong>Columnes i targetes</strong> que s'afegeixen, editen, mouen i esborren.",
+  "kan.w2": "<strong>Arrossegar i amollar</strong> targetes i columnes, amb ratolí i al mòbil.",
+  "kan.w3": "<strong>Teclat</strong>: Alt + fletxes mou la targeta que té el focus, i cada targeta té un botó «Moure».",
+  "kan.w4": "<strong>Etiquetes de color</strong> amb nom i <strong>data límit</strong>, amb avís quan una targeta venç.",
+  "kan.w5": "<strong>Cercador, filtre</strong> per etiqueta i <strong>exportar i importar</strong> el tauler en JSON.",
+  "kan.how1": "L'arrossegament està fet a mà amb Pointer Events, que valen igual per a ratolí i dit. En agafar una targeta deix un forat al seu lloc, la targeta segueix el punter i el forat es va col·locant on cauria.",
+  "kan.how2": "En amollar es canvien les dades i es torna a pintar el tauler. Perquè no faci un bot, apunt on era cada targeta abans de repintar i l'anim fins al seu lloc nou. Si el sistema demana reduir el moviment, no s'anima.",
+  "kan.how3": "Està fet amb HTML, CSS i JavaScript sense frameworks ni llibreries. Les dades del tauler, l'arrossegament i el que es veu en pantalla van en fitxers separats.",
+  "kan.l1": "Fer l'arrossegar i amollar a mà, i per què l'opció que du el navegador no funciona bé en mòbils.",
+  "kan.l2": "Que el que es fa amb el ratolí s'ha de poder fer també amb el teclat.",
+  "kan.l3": "Animar elements que canvien de lloc quan es torna a pintar la pàgina."
 }

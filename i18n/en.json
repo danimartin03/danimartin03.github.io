@@ -249,5 +249,25 @@
   "gast.how3": "It is built with HTML, CSS and JavaScript with no frameworks or libraries. The code that does the maths is kept apart from the code that draws the page.",
   "gast.l1": "Why you should not do money maths with decimals, and how to avoid it.",
   "gast.l2": "Designing a simple algorithm, explaining it step by step and knowing its limits.",
-  "gast.l3": "Not trusting data that comes from outside: I check an imported file in full before using it."
+  "gast.l3": "Not trusting data that comes from outside: I check an imported file in full before using it.",
+
+  "kan.coverAlt": "Kanban board with three columns and coloured cards with labels and due dates",
+  "kan.status": "Live",
+  "kan.title": "Kanban board",
+  "kan.card": "A Kanban board with cards you can drag with a mouse, a finger or the keyboard. Built with Pointer Events and no libraries.",
+  "kan.metaTitle": "Kanban board · Dani Martín",
+  "kan.lead": "A Kanban board with columns and cards that you move by dragging with the mouse, with a finger or with the keyboard. There is no server: the board is stored in the browser.",
+  "kan.role": "Design and development",
+  "kan.type": "Web application",
+  "kan.w1": "<strong>Columns and cards</strong> that can be added, edited, moved and deleted.",
+  "kan.w2": "<strong>Drag and drop</strong> for cards and columns, with a mouse and on mobile.",
+  "kan.w3": "<strong>Keyboard</strong>: Alt + arrow keys move the focused card, and every card has a “Move” button.",
+  "kan.w4": "<strong>Colour labels</strong> with names and a <strong>due date</strong>, with a warning when a card is overdue.",
+  "kan.w5": "<strong>Search, filter</strong> by label and <strong>export and import</strong> the board as JSON.",
+  "kan.how1": "Dragging is hand-built with Pointer Events, which work the same for mouse and touch. When you pick up a card I leave a gap where it was, the card follows the pointer and the gap moves to where it would land.",
+  "kan.how2": "On drop, the data changes and the board is redrawn. So that nothing jumps, I record where each card was before redrawing and animate it to its new place. If the system asks for reduced motion, nothing is animated.",
+  "kan.how3": "It is built with HTML, CSS and JavaScript with no frameworks or libraries. The board data, the dragging and what you see on screen live in separate files.",
+  "kan.l1": "Building drag and drop by hand, and why the browser's built-in option does not work well on mobile.",
+  "kan.l2": "Whatever you can do with the mouse must also be possible with the keyboard.",
+  "kan.l3": "Animating elements that change place when the page is redrawn."
 }
