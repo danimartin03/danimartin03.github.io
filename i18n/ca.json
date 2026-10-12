@@ -269,5 +269,25 @@
   "kan.how3": "Està fet amb HTML, CSS i JavaScript sense frameworks ni llibreries. Les dades del tauler, l'arrossegament i el que es veu en pantalla van en fitxers separats.",
   "kan.l1": "Fer l'arrossegar i amollar a mà, i per què l'opció que du el navegador no funciona bé en mòbils.",
   "kan.l2": "Que el que es fa amb el ratolí s'ha de poder fer també amb el teclat.",
-  "kan.l3": "Animar elements que canvien de lloc quan es torna a pintar la pàgina."
+  "kan.l3": "Animar elements que canvien de lloc quan es torna a pintar la pàgina.",
+
+  "md.coverAlt": "Editor de Markdown: a l'esquerra el text i a la dreta el document amb format",
+  "md.status": "Publicat",
+  "md.title": "Editor de Markdown",
+  "md.card": "Editor de Markdown amb vista prèvia en viu. L'HTML es neteja sempre abans de mostrar-lo perquè un document no pugui executar codi.",
+  "md.metaTitle": "Editor de Markdown · Dani Martín",
+  "md.lead": "Un editor de Markdown amb vista prèvia en viu: escrius a un costat i a l'altre veus el document ja amb format. No té servidor: el text es desa al navegador.",
+  "md.role": "Disseny i desenvolupament",
+  "md.type": "Aplicació web",
+  "md.w1": "<strong>Vista prèvia en viu</strong> en dos panells, que al mòbil passen a ser dues pestanyes.",
+  "md.w2": "<strong>Barra d'eines i dreceres</strong> per a negreta, cursiva, títol, llista, enllaç, codi i cita.",
+  "md.w3": "<strong>Comptador</strong> de paraules, caràcters i temps de lectura, i <strong>desat automàtic</strong>.",
+  "md.w4": "<strong>Obrir</strong> un fitxer .md i <strong>descarregar</strong> el .md o una pàgina HTML completa.",
+  "md.w5": "<strong>Colors</strong> als blocs de codi i tema clar i fosc.",
+  "md.how1": "Markdown permet escriure HTML dins el text. Si el mostràs tal qual, un document obert des d'un fitxer podria executar codi a la pàgina (un atac XSS).",
+  "md.how2": "Per això tot l'HTML passa per DOMPurify abans d'arribar a la pantalla. Hi ha una sola funció que converteix i neteja, i un sol lloc on entra HTML a la pàgina, perquè no es pugui botar per descuit. Ho vaig provar amb una llista d'atacs coneguts.",
+  "md.how3": "Està fet amb HTML, CSS i JavaScript sense frameworks. Fa servir tres llibreries per CDN (marked, DOMPurify i highlight.js) amb versió fixa i comprovació d'integritat.",
+  "md.l1": "Què és un atac XSS i per què no es pot mostrar HTML que ve de fora sense netejar-lo.",
+  "md.l2": "Fer feina amb la selecció d'un camp de text sense rompre el desfer (Ctrl+Z).",
+  "md.l3": "Provar les funcions amb molts de casos a l'atzar: així varen sortir dos errors que a mà no havia vist."
 }

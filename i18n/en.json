@@ -269,5 +269,25 @@
   "kan.how3": "It is built with HTML, CSS and JavaScript with no frameworks or libraries. The board data, the dragging and what you see on screen live in separate files.",
   "kan.l1": "Building drag and drop by hand, and why the browser's built-in option does not work well on mobile.",
   "kan.l2": "Whatever you can do with the mouse must also be possible with the keyboard.",
-  "kan.l3": "Animating elements that change place when the page is redrawn."
+  "kan.l3": "Animating elements that change place when the page is redrawn.",
+
+  "md.coverAlt": "Markdown editor: the text on the left and the formatted document on the right",
+  "md.status": "Live",
+  "md.title": "Markdown editor",
+  "md.card": "A Markdown editor with live preview. The HTML is always cleaned before it is shown, so a document cannot run code.",
+  "md.metaTitle": "Markdown editor · Dani Martín",
+  "md.lead": "A Markdown editor with live preview: you write on one side and see the formatted document on the other. There is no server: the text is stored in the browser.",
+  "md.role": "Design and development",
+  "md.type": "Web application",
+  "md.w1": "<strong>Live preview</strong> in two panes, which become two tabs on mobile.",
+  "md.w2": "<strong>Toolbar and shortcuts</strong> for bold, italic, heading, list, link, code and quote.",
+  "md.w3": "<strong>Counter</strong> for words, characters and reading time, plus <strong>autosave</strong>.",
+  "md.w4": "<strong>Open</strong> a .md file and <strong>download</strong> the .md or a complete HTML page.",
+  "md.w5": "<strong>Syntax colours</strong> in code blocks, and a light and a dark theme.",
+  "md.how1": "Markdown lets you write HTML inside the text. If I showed it as is, a document opened from a file could run code on the page (an XSS attack).",
+  "md.how2": "So all the HTML goes through DOMPurify before it reaches the screen. There is a single function that converts and cleans, and a single place where HTML enters the page, so it cannot be skipped by mistake. I tested it with a list of known attacks.",
+  "md.how3": "It is built with HTML, CSS and JavaScript with no frameworks. It uses three libraries from a CDN (marked, DOMPurify and highlight.js) with a pinned version and an integrity check.",
+  "md.l1": "What an XSS attack is and why you cannot show HTML from outside without cleaning it.",
+  "md.l2": "Working with the selection of a text field without breaking undo (Ctrl+Z).",
+  "md.l3": "Testing functions with many random cases: that is how two bugs I had not seen by hand turned up."
 }
