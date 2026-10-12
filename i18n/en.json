@@ -289,5 +289,25 @@
   "md.how3": "It is built with HTML, CSS and JavaScript with no frameworks. It uses three libraries from a CDN (marked, DOMPurify and highlight.js) with a pinned version and an integrity check.",
   "md.l1": "What an XSS attack is and why you cannot show HTML from outside without cleaning it.",
   "md.l2": "Working with the selection of a text field without breaking undo (Ctrl+Z).",
-  "md.l3": "Testing functions with many random cases: that is how two bugs I had not seen by hand turned up."
+  "md.l3": "Testing functions with many random cases: that is how two bugs I had not seen by hand turned up.",
+
+  "qr.coverAlt": "QR code generator: the form on the left and the generated code on the right",
+  "qr.status": "Live",
+  "qr.title": "QR generator",
+  "qr.card": "A QR code generator for links, WiFi, email and contacts, with colours, a logo and PNG and SVG download. Everything is generated in the browser.",
+  "qr.metaTitle": "QR generator · Dani Martín",
+  "qr.lead": "A QR code generator for links, text, WiFi, email and contacts. Everything is generated in the browser: neither the WiFi password nor the contact details are sent or stored.",
+  "qr.role": "Design and development",
+  "qr.type": "Web application",
+  "qr.w1": "<strong>Four kinds of content</strong>: URL or text, WiFi, email and contact card.",
+  "qr.w2": "<strong>Colours, size, margin</strong> and error correction level.",
+  "qr.w3": "<strong>Warnings</strong> when the contrast is so low the code will not scan, or when the colours are inverted.",
+  "qr.w4": "<strong>Logo in the centre</strong>, from an image that never leaves the browser.",
+  "qr.w5": "<strong>Download</strong> as PNG and as SVG.",
+  "qr.how1": "A small library (qrcode-generator) works out the grid: which little squares are dark. I do the drawing myself, on a canvas for the PNG and writing the SVG by hand.",
+  "qr.how2": "The logo covers part of the code, and it still scans only because QR codes carry redundant data to correct errors. That is why, with a logo, I use the highest correction level and limit its size.",
+  "qr.how3": "To check it, I read the generated codes with a decoder and compared the result with what was typed, using odd texts, every colour combination and logos of several sizes.",
+  "qr.l1": "How a QR code works inside and what error correction is.",
+  "qr.l2": "Working out the contrast between two colours and warning before something stops working.",
+  "qr.l3": "Deciding what may be stored and what may not: here the look is remembered, but never the content."
 }

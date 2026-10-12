@@ -289,5 +289,25 @@
   "md.how3": "Està fet amb HTML, CSS i JavaScript sense frameworks. Fa servir tres llibreries per CDN (marked, DOMPurify i highlight.js) amb versió fixa i comprovació d'integritat.",
   "md.l1": "Què és un atac XSS i per què no es pot mostrar HTML que ve de fora sense netejar-lo.",
   "md.l2": "Fer feina amb la selecció d'un camp de text sense rompre el desfer (Ctrl+Z).",
-  "md.l3": "Provar les funcions amb molts de casos a l'atzar: així varen sortir dos errors que a mà no havia vist."
+  "md.l3": "Provar les funcions amb molts de casos a l'atzar: així varen sortir dos errors que a mà no havia vist.",
+
+  "qr.coverAlt": "Generador de codis QR: a l'esquerra el formulari i a la dreta el codi generat",
+  "qr.status": "Publicat",
+  "qr.title": "Generador de QR",
+  "qr.card": "Generador de codis QR per a enllaços, WiFi, correu i contactes, amb colors, logo i descàrrega en PNG i SVG. Tot es genera al navegador.",
+  "qr.metaTitle": "Generador de QR · Dani Martín",
+  "qr.lead": "Un generador de codis QR per a enllaços, text, WiFi, correu i contactes. Tot es genera al navegador: ni la contrasenya de la WiFi ni les dades de contacte s'envien ni es desen.",
+  "qr.role": "Disseny i desenvolupament",
+  "qr.type": "Aplicació web",
+  "qr.w1": "<strong>Quatre tipus de contingut</strong>: URL o text, WiFi, correu i targeta de contacte.",
+  "qr.w2": "<strong>Colors, mida, marge</strong> i nivell de correcció d'errors.",
+  "qr.w3": "<strong>Avisos</strong> quan el contrast és tan baix que el codi no es llegirà, o quan els colors estan invertits.",
+  "qr.w4": "<strong>Logo al centre</strong>, pujant una imatge que no surt del navegador.",
+  "qr.w5": "<strong>Descàrrega</strong> en PNG i en SVG.",
+  "qr.how1": "Una llibreria petita (qrcode-generator) calcula la quadrícula: quins quadradets van en fosc. El dibuix el faig jo, en canvas per al PNG i escrivint l'SVG a mà.",
+  "qr.how2": "El logo tapa part del codi, i només se segueix llegint perquè els QR duen dades repetides per corregir errors. Per això amb logo faig servir la correcció màxima i en limit la mida.",
+  "qr.how3": "Per comprovar-ho vaig llegir els codis generats amb un lector i vaig comparar el que es llegia amb el que s'havia escrit, amb textos estranys, cada combinació de colors i logos de diverses mides.",
+  "qr.l1": "Com funciona un codi QR per dins i què és la correcció d'errors.",
+  "qr.l2": "Calcular el contrast entre dos colors i avisar abans que qualque cosa deixi de funcionar.",
+  "qr.l3": "Decidir què es pot desar i què no: aquí es recorda l'aspecte, però mai el contingut."
 }
