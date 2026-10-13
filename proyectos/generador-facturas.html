@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-base="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="fac.metaTitle">Generador de facturas · Dani Martín</title>
+  <meta name="description" data-i18n-attr="content=fac.card" content="Generador de facturas para autónomos en España, con IVA por tipos, retención de IRPF y descarga en PDF. Todo se queda en el navegador.">
+  <meta name="author" content="Daniel Martín Pérez">
+  <meta name="theme-color" content="#072B43">
+  <link rel="canonical" href="https://danimartin03.github.io/proyectos/generador-facturas.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://danimartin03.github.io/proyectos/generador-facturas.html">
+  <meta property="og:title" content="Generador de facturas · Dani Martín">
+  <meta property="og:description" content="Generador de facturas para autónomos en España, con IVA por tipos, retención de IRPF y descarga en PDF. Todo se queda en el navegador.">
+  <meta property="og:image" content="https://danimartin03.github.io/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Aplica el tema guardado antes de pintar y avisa al CSS de que hay JS -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) { /* sin acceso a localStorage: se queda el tema oscuro */ }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="../" aria-label="Dani Martín, inicio" data-i18n-attr="aria-label=a11y.home">
+        <span class="logo__cards" aria-hidden="true"><i></i><i></i></span>
+        Dani Martín
+      </a>
+
+      <button class="icon-btn header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-i18n-attr="aria-label=a11y.menu">
+        <svg class="icon icon--open" aria-hidden="true"><use href="../assets/icons/sprite.svg#menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="../assets/icons/sprite.svg#close"/></svg>
+      </button>
+
+      <div class="header__menu" id="menu">
+        <nav class="nav" aria-label="Principal" data-i18n-attr="aria-label=a11y.nav">
+          <a class="nav__link is-active" href="../#proyectos" aria-current="true" data-i18n="nav.projects">Proyectos</a>
+          <a class="nav__link" href="../#experiencia" data-i18n="nav.experience">Experiencia</a>
+          <a class="nav__link" href="../#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+          <a class="nav__link" href="../#tecnologias" data-i18n="nav.tech">Tecnologías</a>
+          <a class="nav__link" href="../#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="header__tools">
+          <div class="lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label=a11y.lang">
+            <button class="lang__btn" type="button" data-lang="es" aria-pressed="true" lang="es" title="Castellano">ES</button>
+            <button class="lang__btn" type="button" data-lang="ca" aria-pressed="false" lang="ca" title="Català">CA</button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+          </div>
+          <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar entre tema claro y oscuro" data-i18n-attr="aria-label=a11y.theme">
+            <svg class="icon icon--sun" aria-hidden="true"><use href="../assets/icons/sprite.svg#sun"/></svg>
+            <svg class="icon icon--moon" aria-hidden="true"><use href="../assets/icons/sprite.svg#moon"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <article>
+      <header class="project-hero">
+        <div class="container">
+          <a class="back hero-in" style="--d:0" href="../#proyectos">
+            <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#arrow-left"/></svg>
+            <span data-i18n="p.back">Todos los proyectos</span></a>
+          <h1 class="project-hero__title hero-in" style="--d:1" data-i18n="fac.title">Generador de facturas</h1>
+          <p class="project-hero__lead hero-in" style="--d:2" data-i18n="fac.lead">Un generador de facturas para autónomos en España. Calcula la base, el IVA por tipos y la retención de IRPF, y descarga la factura en PDF. Es una herramienta de apoyo: no cumple VERI*FACTU ni sustituye a un gestor. Los datos solo se guardan en tu navegador.</p>
+          <ul class="hero__actions hero-in" style="--d:3">
+            <li><a class="btn btn--primary" href="https://danimartin03.github.io/generador-facturas/" target="_blank" rel="noopener">
+              <span data-i18n="p.demo">Probar la demo</span>
+              <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#arrow-up-right"/></svg></a></li>
+            <li><a class="btn" href="https://github.com/danimartin03/generador-facturas" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#github"/></svg>
+              <span data-i18n="p.code">Ver el código</span></a></li>
+          </ul>
+          <dl class="meta hero-in" style="--d:4">
+            <div><dt data-i18n="p.year">Año</dt><dd>2026</dd></div>
+            <div><dt data-i18n="p.role">Mi papel</dt><dd data-i18n="fac.role">Diseño y desarrollo</dd></div>
+            <div><dt data-i18n="p.type">Tipo</dt><dd data-i18n="fac.type">Aplicación web</dd></div>
+            <div><dt data-i18n="p.status">Estado</dt><dd data-i18n="fac.status">Publicado</dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <div class="container">
+        <figure class="project-cover reveal card__media--browser">
+          <img src="../assets/img/proyectos/generador-facturas-web.webp" width="1280" height="720" alt="Generador de facturas: a la izquierda el formulario y a la derecha la factura con su desglose de IVA" data-i18n-attr="alt=fac.coverAlt">
+        </figure>
+      </div>
+
+      <div class="container project-body">
+        <section class="block reveal">
+          <h2 data-i18n="p.what">Qué hace</h2>
+          <ul class="list">
+            <li data-i18n="fac.w1"><strong>Emisor y cliente</strong> con logo, numeración correlativa por año y fecha de operación.</li>
+            <li data-i18n="fac.w2"><strong>Líneas con IVA por línea</strong> (21 %, 10 %, 4 % o exento) y desglose por tipo.</li>
+            <li data-i18n="fac.w3"><strong>Retención de IRPF</strong> opcional y formato español (1.234,56 €).</li>
+            <li data-i18n="fac.w4"><strong>Revisión en vivo</strong>: dice lo que falta y avisa de un NIF que no valida o de un salto de numeración.</li>
+            <li data-i18n="fac.w5"><strong>Guardar, duplicar y borrar facturas</strong>, descargar el PDF y exportar o importar una copia en JSON.</li>
+          </ul>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>CSS de impresión</li></ul>
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.how">Cómo funciona</h2>
+          <p data-i18n="fac.how1">No uso librerías. El dinero va en céntimos y las cantidades en milésimas, todo con enteros, porque los decimales de JavaScript se desvían. El IVA se calcula una vez por tipo y la retención una vez sobre la base total.</p>
+          <p data-i18n="fac.how2">El PDF sale de la impresión del navegador: la página tiene una copia de la factura que solo se ve al imprimir, con tamaño A4, márgenes que se repiten en cada página y la cabecera de la tabla repetida.</p>
+          <p data-i18n="fac.how3">Para comprobarlo comparé 300.000 facturas al azar con un cálculo exacto con BigInt, y generé PDFs reales para medir sus márgenes y páginas.</p>
+        </section>
+        <section class="block reveal">
+          <h2 data-i18n="p.learned">Lo que aprendí</h2>
+          <ul class="list">
+            <li data-i18n="fac.l1">Por qué no se calcula dinero con decimales y cómo hacerlo con enteros, incluido el redondeo.</li>
+            <li data-i18n="fac.l2">Generar un PDF con CSS de impresión y validar un DNI, un NIE y un CIF.</li>
+            <li data-i18n="fac.l3">Tratar los datos guardados y los archivos importados como no fiables, y avisar antes de perder datos.</li>
+          </ul>
+        </section>
+
+        <a class="next reveal" href="domotica.html">
+          <span>
+            <span class="next__label" data-i18n="p.next">Siguiente proyecto</span><br>
+            <span class="next__title" data-i18n="domo.title">Domótica</span>
+          </span>
+          <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#arrow-right"/></svg>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span data-year>2026</span> Daniel Martín Pérez</p>
+      <p data-i18n="footer.made">Hecho a mano con HTML, CSS y JavaScript.</p>
+      <a class="link" href="#contenido" data-i18n="footer.top">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/reveal.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
